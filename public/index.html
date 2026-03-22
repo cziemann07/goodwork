@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GoodWork — Líderes que entregam resultado desde o início</title>
-<meta name="description" content="Recrutamento estratégico de líderes. Selecionamos com assertividade e acompanhamos a adaptação nos primeiros 30 dias.">
+<title>GoodWork — Contratação Estratégica de Líderes</title>
+<meta name="description" content="A GoodWork apoia empresas na identificação e seleção estratégica de líderes capazes de desenvolver equipes e impulsionar o crescimento do negócio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,1157 +19,290 @@
     --gray-600: #4A6062;
     --gray-800: #1E3235;
     --gray-900: #0F1E20;
-    --teal-50: #EDFBFC;
-    --teal-100: #D0F5F7;
     --teal-light: #7CE2E7;
     --teal-medium: #2ACCD9;
     --teal-dark: #1E9BA1;
     --teal-900: #145F63;
-    --danger-50: #FFF1F0;
-    --danger-100: #FFE0DD;
-    --danger: #E74C3C;
-    --danger-soft: #DC5B4B;
-    --danger-dark: #B83A2E;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Raleway', sans-serif;
-    background: var(--white);
-    color: var(--gray-800);
-    overflow-x: hidden;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-  }
-
-  /* ===== NAVBAR ===== */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 0.9rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--gray-100);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .navbar.scrolled {
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-  }
-
-  .navbar-logo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--gray-900);
-    text-decoration: none;
-  }
-
-  .navbar-logo span {
-    color: var(--teal-dark);
-  }
-
-  .navbar-cta {
-    background: var(--teal-dark);
-    color: var(--white);
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-  }
-
-  .navbar-cta:hover {
-    background: var(--teal-900);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(30, 155, 161, 0.3);
-  }
-
-  /* ===== HERO ===== */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7rem 2rem 4rem;
-    background: linear-gradient(170deg, var(--white) 0%, var(--teal-50) 50%, var(--white) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .hero-decoration {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  .hero-decoration.one {
-    top: -120px;
-    right: -80px;
-    width: 450px;
-    height: 450px;
-    background: radial-gradient(circle, rgba(42, 204, 217, 0.08) 0%, transparent 70%);
-  }
-
-  .hero-decoration.two {
-    bottom: -60px;
-    left: -100px;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(30, 155, 161, 0.06) 0%, transparent 70%);
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: left;
-  }
-
-  .hero-image {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-image img {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-    object-fit: cover;
-    aspect-ratio: 4/3;
-  }
-
-  .hero-image::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    right: -12px;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    border: 2px solid var(--teal-100);
-    z-index: -1;
-  }
-
-  .hero-badge {
-    display: inline-block;
-    padding: 0.4rem 1.2rem;
-    background: var(--teal-50);
-    border: 1px solid var(--teal-100);
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--teal-dark);
-    margin-bottom: 2rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-
-  .hero h1 {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    font-weight: 800;
-    line-height: 1.18;
-    margin-bottom: 1.5rem;
-    color: var(--gray-900);
-  }
-
-  .hero h1 .highlight {
-    color: var(--teal-dark);
-    position: relative;
-    white-space: nowrap;
-  }
-
-  .hero h1 .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: var(--teal-100);
-    border-radius: 3px;
-    z-index: -1;
-  }
-
-  .hero-sub {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    color: var(--gray-600);
-    line-height: 1.75;
-    margin-bottom: 2.5rem;
-    max-width: 580px;
-  }
-
-  .hero-cta {
-    display: inline-block;
-    background: var(--teal-dark);
-    color: var(--white);
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.02rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(30, 155, 161, 0.25);
-  }
-
-  .hero-cta:hover {
-    background: var(--teal-900);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(30, 155, 161, 0.35);
-  }
-
-  /* ===== SECTION COMMON ===== */
-  section { padding: 5rem 2rem; }
-
-  .section-container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .section-label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--teal-dark);
-    margin-bottom: 0.8rem;
-  }
-
-  .section-title {
-    font-size: clamp(1.6rem, 3.5vw, 2.3rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
-    color: var(--gray-900);
-  }
-
-  .section-desc {
-    font-size: 1.05rem;
-    color: var(--gray-600);
-    line-height: 1.7;
-    max-width: 620px;
-    margin-bottom: 3rem;
-  }
-
-  /* ===== PROBLEMS SECTION ===== */
-  .problems {
-    background: var(--white);
-  }
-
-  .problems-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 1rem;
-  }
-
-  .problem-card {
-    background: var(--off-white);
-    border: 1px solid var(--gray-100);
-    border-radius: 12px;
-    padding: 1.3rem 1.4rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    transition: all 0.3s ease;
-  }
-
-  .problem-card:hover {
-    border-color: var(--danger-100);
-    background: var(--danger-50);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-  }
-
-  .problem-icon {
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    background: var(--danger-50);
-    border: 1px solid var(--danger-100);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--danger);
-    font-size: 0.85rem;
-    font-weight: 700;
-  }
-
-  .problem-card:hover .problem-icon {
-    background: var(--danger-100);
-  }
-
-  .problem-card p {
-    font-size: 0.95rem;
-    color: var(--gray-800);
-    line-height: 1.5;
-  }
-
-  /* ===== CONSEQUENCES ===== */
-  .consequences {
-    background: var(--gray-50);
-    text-align: center;
-  }
-
-  .consequences .section-title {
-    color: var(--danger-dark);
-  }
-
-  .consequences-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-    margin-top: 2rem;
-  }
-
-  .consequence-tag {
-    background: var(--white);
-    border: 1px solid var(--danger-100);
-    border-radius: 50px;
-    padding: 0.65rem 1.3rem;
-    font-size: 0.88rem;
-    color: var(--danger-dark);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-  }
-
-  .consequence-tag:hover {
-    background: var(--danger-50);
-    border-color: var(--danger);
-    transform: scale(1.03);
-  }
-
-  /* ===== VALUE PROPOSITION ===== */
-  .value-prop {
-    background: var(--teal-dark);
-    text-align: center;
-    padding: 4.5rem 2rem;
-  }
-
-  .value-prop blockquote {
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(1.2rem, 3vw, 1.75rem);
-    font-weight: 600;
-    line-height: 1.5;
-    color: var(--white);
-    max-width: 780px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 2rem;
-  }
-
-  .value-prop blockquote::before,
-  .value-prop blockquote::after {
-    font-size: 4rem;
-    color: var(--teal-light);
-    opacity: 0.4;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    line-height: 1;
-  }
-
-  .value-prop blockquote::before {
-    content: '\201C';
-    top: -1.2rem;
-    left: -0.5rem;
-  }
-
-  .value-prop blockquote::after {
-    content: '\201D';
-    bottom: -2rem;
-    right: -0.5rem;
-  }
-
-  .value-prop blockquote span {
-    color: var(--teal-light);
-  }
-
-  /* ===== SOLUTION (4 PILARES) ===== */
-  .solution {
-    background: var(--white);
-    position: relative;
-  }
-
-  .solution-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .solution-image img {
-    width: 100%;
-    border-radius: 14px;
-    object-fit: cover;
-    aspect-ratio: 3/4;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-  }
-
-  .pilares-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.1rem;
-    margin-top: 1rem;
-  }
-
-  .pilar-card {
-    background: var(--off-white);
-    border: 1px solid var(--gray-100);
-    border-radius: 14px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pilar-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--teal-dark), var(--teal-medium), var(--teal-light));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .pilar-card:hover::before { opacity: 1; }
-
-  .pilar-card:hover {
-    border-color: var(--teal-100);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(30, 155, 161, 0.1);
-  }
-
-  .pilar-number {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--teal-medium);
-    opacity: 0.2;
-    margin-bottom: 0.3rem;
-    line-height: 1;
-  }
-
-  .pilar-card h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.7rem;
-    color: var(--gray-900);
-  }
-
-  .pilar-card p {
-    font-size: 0.9rem;
-    color: var(--gray-600);
-    line-height: 1.6;
-  }
-
-  /* ===== FORM SECTION ===== */
-  .form-section {
-    background: var(--gray-50);
-    padding: 5rem 2rem;
-  }
-
-  .form-wrapper {
-    max-width: 680px;
-    margin: 0 auto;
-    background: var(--white);
-    border: 1px solid var(--gray-100);
-    border-radius: 18px;
-    padding: 2.8rem 2.5rem;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.05);
-  }
-
-  .form-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--teal-dark), var(--teal-medium), var(--teal-light));
-  }
-
-  .form-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    text-align: center;
-    color: var(--gray-900);
-  }
-
-  .form-subtitle {
-    color: var(--gray-600);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-  }
-
-  .form-question {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--teal-dark);
-    margin-bottom: 1rem;
-  }
-
-  .form-options {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .form-option {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 0.8rem 1.1rem;
-    background: var(--off-white);
-    border: 1px solid var(--gray-100);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .form-option:hover {
-    border-color: var(--teal-medium);
-    background: var(--teal-50);
-  }
-
-  .form-option input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--gray-200);
-    border-radius: 5px;
-    flex-shrink: 0;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.2s ease;
-    background: var(--white);
-  }
-
-  .form-option input[type="checkbox"]:checked {
-    background: var(--teal-dark);
-    border-color: var(--teal-dark);
-  }
-
-  .form-option input[type="checkbox"]:checked::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-
-  .form-option span {
-    font-size: 0.9rem;
-    color: var(--gray-800);
-  }
-
-  .form-divider {
-    border: none;
-    border-top: 1px solid var(--gray-100);
-    margin: 1.5rem 0;
-  }
-
-  .form-group {
-    margin-bottom: 1.1rem;
-  }
-
-  .form-group label {
-    display: block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.83rem;
-    font-weight: 500;
-    color: var(--gray-600);
-    margin-bottom: 0.35rem;
-  }
-
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    background: var(--off-white);
-    border: 1px solid var(--gray-100);
-    border-radius: 10px;
-    color: var(--gray-900);
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.95rem;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .form-group input::placeholder {
-    color: var(--gray-400);
-  }
-
-  .form-group input:focus,
-  .form-group select:focus {
-    border-color: var(--teal-medium);
-    box-shadow: 0 0 0 3px rgba(42, 204, 217, 0.12);
-  }
-
-  .form-group select {
-    appearance: none;
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231E9BA1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-  }
-
-  .form-group select option {
-    background: var(--white);
-    color: var(--gray-900);
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .form-submit {
-    width: 100%;
-    padding: 1rem;
-    background: var(--teal-dark);
-    color: var(--white);
-    border: none;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.02rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 0.5rem;
-    box-shadow: 0 4px 20px rgba(30, 155, 161, 0.25);
-  }
-
-  .form-submit:hover {
-    background: var(--teal-900);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(30, 155, 161, 0.35);
-  }
-
-  /* ===== CTA FINAL ===== */
-  .cta-final {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: var(--white);
-  }
-
-  .cta-final p {
-    font-size: 1.05rem;
-    color: var(--gray-600);
-    margin-bottom: 1.5rem;
-  }
-
-  .cta-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    background: #25D366;
-    color: var(--white);
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.02rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.25);
-  }
-
-  .cta-whatsapp:hover {
-    background: #20BD5A;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35);
-  }
-
-  .cta-whatsapp svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--teal-dark);
-    color: var(--white);
-    padding: 4rem 2rem 2rem;
-  }
-
-  .footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .footer-brand img {
-    height: 60px;
-    margin-bottom: 1.2rem;
-    filter: brightness(0) invert(1);
-  }
-
-  .footer-brand p {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    max-width: 320px;
-  }
-
-  .footer-brand strong {
-    color: var(--white);
-    font-weight: 700;
-  }
-
-  .footer-col h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-col h3::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: rgba(255,255,255,0.3);
-    margin-top: 0.8rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-
-  .footer-contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.85);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  a.footer-contact-item:hover {
-    color: var(--white);
-  }
-
-  .footer-contact-item svg {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    fill: rgba(255,255,255,0.6);
-  }
-
-  .footer-bottom {
-    max-width: 1100px;
-    margin: 2.5rem auto 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    text-align: center;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.45);
-  }
-
-  @media (max-width: 768px) {
-    .footer-container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .hero { padding: 7rem 1.5rem 3rem; }
-    .hero-inner { grid-template-columns: 1fr; text-align: center; }
-    .hero-content { text-align: center; }
-    .hero-image::after { display: none; }
-    section { padding: 3.5rem 1.5rem; }
-    .form-wrapper { padding: 2rem 1.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .problems-grid { grid-template-columns: 1fr; }
-    .solution-layout { grid-template-columns: 1fr; }
-    .solution-image { order: -1; }
-    .solution-image img { aspect-ratio: 16/9; }
-    .pilares-grid { grid-template-columns: 1fr 1fr; }
-    .value-prop blockquote::before,
-    .value-prop blockquote::after { display: none; }
-    .value-prop blockquote { padding: 0; }
-  }
-
-  @media (max-width: 480px) {
-    .pilares-grid { grid-template-columns: 1fr; }
-    .navbar { padding: 0.8rem 1rem; }
-    .navbar-logo { font-size: 1.2rem; }
-    .navbar-cta { padding: 0.5rem 1rem; font-size: 0.8rem; }
-  }
-
-  /* ===== ANIMATIONS ===== */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-content { animation: fadeUp 0.7s ease-out; }
-
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-  }
-
-  .animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    --cta: #0E7C83;
+    --cta-hover: #0A5F64;
+  }
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Raleway',sans-serif;background:var(--white);color:var(--gray-800);overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif}
+
+.navbar{position:fixed;top:0;width:100%;z-index:100;padding:.9rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--gray-100);transition:box-shadow .3s}
+.navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.navbar-logo{text-decoration:none}.navbar-logo img{height:52px}
+.navbar-cta{background:var(--cta);color:var(--white);padding:.6rem 1.5rem;border-radius:8px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;transition:all .3s;position:relative;overflow:hidden}
+.navbar-cta::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.navbar-cta:hover::after{left:100%}
+.navbar-cta:hover{background:var(--cta-hover);transform:translateY(-1px);box-shadow:0 4px 15px rgba(14,124,131,.3)}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#1E9BA1 0%,#2ACCD9 50%,#7CE2E7 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.06);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:2}
+.hero-content{text-align:left}
+.hero-badge{display:inline-block;padding:.4rem 1.2rem;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);border-radius:50px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;color:var(--white);margin-bottom:1.5rem;letter-spacing:.5px;text-transform:uppercase;text-shadow:0 0 20px rgba(255,255,255,.3);animation:badgeGlow 2s ease-in-out infinite alternate}
+@keyframes badgeGlow{from{box-shadow:0 0 8px rgba(255,255,255,.15);border-color:rgba(255,255,255,.3)}to{box-shadow:0 0 20px rgba(124,226,231,.4);border-color:rgba(255,255,255,.5)}}
+.hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.18;margin-bottom:1.5rem;color:var(--white)}
+.hero h1 .highlight{position:relative;white-space:nowrap}
+.hero h1 .highlight::after{content:'';position:absolute;bottom:2px;left:0;width:100%;height:6px;background:rgba(255,255,255,.35);border-radius:3px;z-index:-1}
+.hero-sub{font-size:clamp(1rem,2vw,1.1rem);color:rgba(255,255,255,.9);line-height:1.75;margin-bottom:2.5rem;max-width:520px}
+.hero-cta{display:inline-block;background:var(--white);color:var(--teal-dark);padding:1rem 2.5rem;border-radius:10px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;transition:all .3s;box-shadow:0 4px 20px rgba(0,0,0,.15);position:relative;overflow:hidden}
+.hero-cta::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transition:left .5s ease}
+.hero-cta:hover::after{left:100%}
+.hero-cta:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 35px rgba(0,0,0,.25)}
+.hero-cta:active{transform:translateY(0) scale(0.98);box-shadow:0 4px 15px rgba(0,0,0,.2)}
+.hero-image img{width:100%;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.2);object-fit:cover;aspect-ratio:4/3}
+
+section{padding:5rem 2rem}
+.section-container{max-width:1100px;margin:0 auto}
+.section-label{font-family:'Poppins',sans-serif;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--teal-dark);margin-bottom:.8rem}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:700;line-height:1.2;margin-bottom:.8rem;color:var(--gray-900)}
+.section-desc{font-size:1.05rem;color:var(--gray-600);line-height:1.7;max-width:650px;margin-bottom:3rem}
+
+.problems{background:var(--white)}
+.problems-intro{max-width:700px;margin-bottom:2.5rem}
+.problems-intro p{font-size:1.05rem;color:var(--gray-600);line-height:1.7;margin-bottom:.8rem}
+.problems-intro strong{color:var(--gray-900)}
+.problems-list{max-width:700px;display:flex;flex-direction:column;gap:.7rem;list-style:none}
+.problems-list li{font-size:1rem;color:var(--gray-800);line-height:1.6;padding:.9rem 1.2rem;background:var(--off-white);border-left:3px solid var(--teal-medium);border-radius:0 8px 8px 0;transition:all .3s}
+.problems-list li:hover{background:var(--gray-50);border-left-color:var(--teal-dark)}
+
+.impact{background:var(--teal-dark);color:var(--white);text-align:center}
+.impact .section-label{color:var(--teal-light)}
+.impact .section-title{color:var(--white)}
+.impact .section-desc{color:rgba(255,255,255,.8);margin-left:auto;margin-right:auto}
+.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:1rem}
+.impact-item{padding:1.5rem 1rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;font-size:.92rem;color:rgba(255,255,255,.9);line-height:1.5;transition:all .35s ease;cursor:default}
+.impact-item:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+
+.solution{background:var(--off-white)}
+.solution-header{text-align:center;margin-bottom:3rem}
+.solution-header .section-desc{margin-left:auto;margin-right:auto}
+.solution-image{max-width:900px;margin:0 auto 2.5rem}
+.solution-image img{width:100%;border-radius:14px;object-fit:cover;max-height:360px;box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.steps-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:1100px;margin:0 auto}
+.step-card{width:calc(25% - 0.75rem)}
+.step-card{background:var(--white);border:1px solid var(--gray-100);border-radius:12px;padding:1.2rem 1.4rem;display:flex;align-items:flex-start;gap:1rem;transition:all .35s ease;cursor:default}
+.step-card:hover{border-color:var(--teal-medium);transform:translateY(-4px);box-shadow:0 8px 25px rgba(30,155,161,.12)}
+.step-card:hover .step-number{transform:scale(1.15);box-shadow:0 4px 12px rgba(30,155,161,.3)}
+.step-number{flex-shrink:0;width:34px;height:34px;background:linear-gradient(135deg,var(--teal-dark),var(--teal-medium));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:.8rem;color:var(--white);transition:all .35s ease}
+.step-card h4{font-size:.95rem;font-weight:600;color:var(--gray-900);margin-bottom:.2rem}
+.step-card p{font-size:.85rem;color:var(--gray-600);line-height:1.5}
+
+.results{background:var(--teal-medium);color:var(--white);text-align:center;padding:4rem 2rem}
+.results-statement{font-family:'Poppins',sans-serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:600;line-height:1.5;max-width:700px;margin:0 auto 2.5rem}
+.results-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:800px;margin:0 auto}
+.result-tag{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:.6rem 1.3rem;font-size:.88rem;font-weight:500;color:var(--white)}
+
+.form-section{background:var(--white);padding:5rem 2rem}
+.form-container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.form-text h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--gray-900);margin-bottom:1rem;line-height:1.2}
+.form-text p{font-size:1.05rem;color:var(--gray-600);line-height:1.7;margin-bottom:1.5rem}
+.form-wrapper{background:var(--off-white);border:1px solid var(--gray-100);border-radius:18px;padding:2.5rem;position:relative;overflow:hidden;box-shadow:0 4px 30px rgba(0,0,0,.05)}
+.form-wrapper::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal-dark),var(--teal-medium),var(--teal-light))}
+.form-header{font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:600;color:var(--teal-dark);margin-bottom:1.5rem;text-align:center}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-family:'Poppins',sans-serif;font-size:.83rem;font-weight:500;color:var(--gray-600);margin-bottom:.35rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.8rem 1rem;background:var(--white);border:1px solid var(--gray-100);border-radius:10px;color:var(--gray-900);font-family:'Raleway',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s,box-shadow .2s}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--gray-400)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal-medium);box-shadow:0 0 0 3px rgba(42,204,217,.12)}
+.form-group select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231E9BA1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.form-group select option{background:var(--white);color:var(--gray-900)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{width:100%;padding:1rem;background:var(--cta);color:var(--white);border:none;border-radius:10px;font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:all .3s;margin-top:.5rem;box-shadow:0 4px 20px rgba(14,124,131,.25);position:relative;overflow:hidden}
+.form-submit::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.form-submit:hover::after{left:100%}
+.form-submit:hover{background:var(--cta-hover);transform:translateY(-2px);box-shadow:0 8px 30px rgba(14,124,131,.35)}
+.form-submit:active{transform:translateY(0);box-shadow:0 4px 15px rgba(14,124,131,.2)}
+
+.cta-final{text-align:center;padding:4rem 2rem;background:var(--teal-light)}
+.cta-final h2{font-family:'Poppins',sans-serif;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;color:var(--gray-900);margin-bottom:1rem}
+.cta-final p{font-size:1.05rem;color:var(--gray-800);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6}
+.cta-whatsapp{display:inline-flex;align-items:center;gap:.7rem;background:var(--cta);color:var(--white);padding:1rem 2.5rem;border-radius:10px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;transition:all .3s;box-shadow:0 4px 18px rgba(14,124,131,.3);position:relative;overflow:hidden}
+.cta-whatsapp::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.cta-whatsapp:hover::after{left:100%}
+.cta-whatsapp:hover{background:var(--cta-hover);transform:translateY(-3px) scale(1.02);box-shadow:0 10px 30px rgba(14,124,131,.4)}
+.cta-whatsapp:active{transform:translateY(0) scale(0.98)}
+.cta-whatsapp svg{width:22px;height:22px}
+
+.about{background:var(--white);text-align:center;padding:4rem 2rem}
+.about p{font-size:1.05rem;color:var(--gray-600);line-height:1.7;max-width:700px;margin:0 auto}
+.about strong{color:var(--gray-900)}
+
+footer{background:var(--teal-dark);color:var(--white);padding:4rem 2rem 2rem}
+.footer-container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:3rem}
+.footer-brand img{height:60px;margin-bottom:1.2rem;filter:brightness(0) invert(1)}
+.footer-brand p{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:1rem;max-width:320px}
+.footer-brand strong{color:var(--white);font-weight:700}
+.footer-col h3{font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:600;margin-bottom:.5rem}
+.footer-col h3::after{content:'';display:block;width:40px;height:2px;background:rgba(255,255,255,.3);margin-top:.8rem;margin-bottom:1.2rem}
+.footer-contact{display:flex;flex-direction:column;gap:.7rem}
+.footer-contact-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s}
+a.footer-contact-item:hover{color:var(--white)}
+.footer-contact-item svg{width:18px;height:18px;flex-shrink:0;margin-top:2px;fill:rgba(255,255,255,.6)}
+.footer-bottom{max-width:1100px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);text-align:center;font-size:.78rem;color:rgba(255,255,255,.45)}
+
+@media(max-width:768px){.hero{padding:7rem 1.5rem 3rem}.hero-inner{grid-template-columns:1fr;text-align:center}.hero-content{text-align:center}section{padding:3.5rem 1.5rem}.form-container{grid-template-columns:1fr;gap:2rem}.form-text{text-align:center}.form-wrapper{padding:2rem 1.5rem}.form-row{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}.step-card{width:calc(50% - 0.5rem)}.solution-image{order:-1}.impact-grid{grid-template-columns:1fr 1fr}.footer-container{grid-template-columns:1fr;gap:2rem}}
+@media(max-width:480px){.impact-grid{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr}.step-card{width:100%}.navbar{padding:.8rem 1rem}.navbar-logo img{height:40px}.navbar-cta{padding:.5rem 1rem;font-size:.8rem}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.hero-content{animation:fadeUp .7s ease-out}
+.animate-on-scroll{opacity:0;transform:translateY(20px);transition:all .5s ease}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="#" class="navbar-logo"><img src="images/logo.svg" alt="GoodWork" style="height: 52px;"></a>
-    <a href="#formulario" class="navbar-cta">Fale com a gente</a>
-  </nav>
+<nav class="navbar">
+  <a href="#" class="navbar-logo"><img src="images/logo.svg" alt="GoodWork"></a>
+  <a href="#formulario" class="navbar-cta">Fale com um especialista</a>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-decoration one"></div>
-    <div class="hero-decoration two"></div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge">Recrutamento estratégico de líderes</div>
-        <h1>Reduza o risco de <span class="highlight">contratações erradas</span> e tenha líderes que entregam resultado desde o primeiro dia.</h1>
-        <p class="hero-sub">Selecionamos líderes com assertividade, estruturamos a entrada e acompanhamos a adaptação nos primeiros 30 dias.</p>
-        <a href="#formulario" class="hero-cta">Quero contratar melhor →</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/hero.jpeg" alt="Equipe em reunião de liderança" loading="eager">
-      </div>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Contratação Estratégica de Líderes</div>
+      <h1>Reduza o risco de <span class="highlight">contratações erradas</span> e contrate líderes capazes de gerar resultados.</h1>
+      <p class="hero-sub">A GoodWork apoia empresas na identificação e seleção estratégica de líderes, profissionais capazes de desenvolver equipes, fortalecer a cultura e impulsionar o crescimento do negócio.</p>
+      <a href="#formulario" class="hero-cta">Quero contratar um líder estratégico →</a>
     </div>
-  </section>
-
-  <!-- PROBLEMAS -->
-  <section class="problems" id="problemas">
-    <div class="section-container">
-      <span class="section-label">Você se identifica?</span>
-      <h2 class="section-title">Esses desafios parecem familiares?</h2>
-      <p class="section-desc">Se sua empresa enfrenta algum desses problemas, você não está sozinho — e existe um caminho melhor.</p>
-
-      <div class="problems-grid">
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Dificuldade em engajar e motivar a equipe no dia a dia</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Falta de clareza nos processos internos</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Sensação de que o time trabalha muito, mas entrega pouco resultado</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Contratar líderes que não performam como esperado</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Errar na escolha e ter que desligar em pouco tempo</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Dificuldade em avaliar comportamento e perfil de liderança</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Basear a decisão apenas em currículo e entrevista superficial</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Falta de clareza sobre o perfil ideal para a vaga</p>
-        </div>
-        <div class="problem-card animate-on-scroll">
-          <div class="problem-icon">✕</div>
-          <p>Dificuldade em filtrar candidatos realmente qualificados</p>
-        </div>
-      </div>
+    <div class="hero-image">
+      <img src="images/hero.jpeg" alt="Equipe em reunião de liderança">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONSEQUÊNCIAS -->
-  <section class="consequences" id="consequencias">
-    <div class="section-container">
-      <span class="section-label">E se nada mudar?</span>
-      <h2 class="section-title">O preço de não agir é alto</h2>
-      <p class="section-desc" style="margin-left: auto; margin-right: auto;">Cada contratação errada custa caro — em dinheiro, tempo e no moral da equipe.</p>
-
-      <div class="consequences-list">
-        <div class="consequence-tag animate-on-scroll">Queda de produtividade após contratação</div>
-        <div class="consequence-tag animate-on-scroll">Falta de alinhamento entre liderança e direção</div>
-        <div class="consequence-tag animate-on-scroll">Custo oculto de manter um líder que não entrega</div>
-        <div class="consequence-tag animate-on-scroll">Equipe desmotivada por má liderança</div>
-        <div class="consequence-tag animate-on-scroll">Perda de bons colaboradores</div>
-        <div class="consequence-tag animate-on-scroll">Retrabalho e novas contratações</div>
-      </div>
+<section class="problems" id="problemas">
+  <div class="section-container">
+    <span class="section-label">O desafio real</span>
+    <h2 class="section-title">O problema não é encontrar candidatos.</h2>
+    <div class="problems-intro">
+      <p>Muitas empresas não têm dificuldade em encontrar candidatos. A dificuldade real está em <strong>identificar quem realmente tem perfil de liderança.</strong></p>
+      <p>Contratar um líder apenas pelo currículo ou experiência anterior pode gerar grandes riscos. Entre os problemas mais comuns estão:</p>
     </div>
-  </section>
+    <ul class="problems-list">
+      <li class="animate-on-scroll">Líderes com dificuldade em desenvolver equipes</li>
+      <li class="animate-on-scroll">Desalinhamento com a cultura da empresa</li>
+      <li class="animate-on-scroll">Baixa capacidade de tomada de decisão</li>
+      <li class="animate-on-scroll">Conflitos internos e queda de produtividade</li>
+      <li class="animate-on-scroll">Alta rotatividade da equipe</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- PROPOSTA DE VALOR -->
-  <section class="value-prop">
-    <div class="section-container">
-      <blockquote>
-        Não é só contratar: nós <span>garantimos que o líder entregue resultado</span> desde o início.
-      </blockquote>
+<section class="impact">
+  <div class="section-container">
+    <span class="section-label">O impacto de uma liderança mal escolhida</span>
+    <h2 class="section-title">Uma contratação inadequada para cargos de liderança pode gerar consequências importantes.</h2>
+    <p class="section-desc">Por isso, a escolha de líderes precisa ser conduzida de forma estratégica e estruturada.</p>
+    <div class="impact-grid">
+      <div class="impact-item animate-on-scroll">Perda de produtividade da equipe</div>
+      <div class="impact-item animate-on-scroll">Desgaste da gestão e do ambiente de trabalho</div>
+      <div class="impact-item animate-on-scroll">Aumento da rotatividade de colaboradores</div>
+      <div class="impact-item animate-on-scroll">Perda de talentos importantes</div>
+      <div class="impact-item animate-on-scroll">Dificuldades no crescimento da empresa</div>
     </div>
-    <div style="max-width: 900px; margin: 2.5rem auto 0; padding: 0 2rem;">
-      <img src="images/lideranca.jpeg" alt="Líder apresentando estratégia para equipe" loading="lazy" style="width: 100%; border-radius: 14px; opacity: 0.85; object-fit: cover; max-height: 320px;">
+  </div>
+</section>
+
+<section class="solution" id="solucao">
+  <div class="section-container">
+    <div class="solution-header">
+      <span class="section-label">Nossa solução</span>
+      <h2 class="section-title">Como funciona nossa Contratação Estratégica de Líderes</h2>
+      <p class="section-desc">Mais do que preencher uma vaga. Nosso processo busca identificar profissionais realmente preparados para liderar e gerar resultados.</p>
     </div>
-  </section>
-
-  <!-- 4 PILARES -->
-  <section class="solution" id="solucao">
-    <div class="section-container">
-      <div style="text-align: center;">
-        <span class="section-label">Como a GoodWork resolve</span>
-        <h2 class="section-title" style="margin-bottom: 0.5rem;">Os 4 pilares do nosso método</h2>
-        <p class="section-desc" style="margin-left: auto; margin-right: auto;">Identificamos, contratamos e acompanhamos líderes estratégicos para garantir aderência à cultura e performance desde o início.</p>
-      </div>
-
-      <div class="solution-layout">
-        <div class="solution-image">
-          <img src="images/pilares.jpeg" alt="Equipe reunida discutindo estratégia" loading="lazy">
-        </div>
-        <div>
-          <div class="pilares-grid">
-            <div class="pilar-card animate-on-scroll">
-              <div class="pilar-number">01</div>
-              <h3>Assertividade na Contratação</h3>
-              <p>Redução de erro com mapeamento comportamental e avaliação profunda de perfil de liderança.</p>
-            </div>
-            <div class="pilar-card animate-on-scroll">
-              <div class="pilar-number">02</div>
-              <h3>Onboarding Estruturado</h3>
-              <p>Entrada organizada para que o novo líder entenda cultura, processos e expectativas desde o dia 1.</p>
-            </div>
-            <div class="pilar-card animate-on-scroll">
-              <div class="pilar-number">03</div>
-              <h3>Acompanhamento 15 e 30 dias</h3>
-              <p>Garantia de adaptação com checkpoints estratégicos nos primeiros 30 dias de operação.</p>
-            </div>
-            <div class="pilar-card animate-on-scroll">
-              <div class="pilar-number">04</div>
-              <h3>Aceleração de Performance</h3>
-              <p>Rampagem mais rápida para que o líder gere impacto real no menor tempo possível.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="solution-image">
+      <img src="images/pilares.jpeg" alt="Equipe reunida discutindo estratégia" loading="lazy">
     </div>
-  </section>
+    <div class="steps-grid">
+      <div class="step-card animate-on-scroll"><div class="step-number">1</div><div><h4>Avaliação técnica e comportamental</h4><p>Experiência, postura, comunicação e capacidade de execução.</p></div></div>
+      <div class="step-card animate-on-scroll"><div class="step-number">2</div><div><h4>Aderência cultural</h4><p>Alinhamento entre o perfil do candidato e a cultura da empresa.</p></div></div>
+      <div class="step-card animate-on-scroll"><div class="step-number">3</div><div><h4>Conexão com o negócio</h4><p>Compreensão do propósito e dos desafios da organização.</p></div></div>
+      <div class="step-card animate-on-scroll"><div class="step-number">4</div><div><h4>Momento profissional</h4><p>Fatores que podem impactar desempenho e estabilidade na função.</p></div></div>
+      <div class="step-card animate-on-scroll"><div class="step-number">5</div><div><h4>Entrevistas por competência</h4><p>Comportamentos e resultados anteriores como indicadores futuros.</p></div></div>
+      <div class="step-card animate-on-scroll"><div class="step-number">6</div><div><h4>Interesse real na oportunidade</h4><p>Nível de prioridade e alinhamento com objetivos de carreira.</p></div></div>
+      <div class="step-card animate-on-scroll"><div class="step-number">7</div><div><h4>Energia e potencial de crescimento</h4><p>Iniciativa, disposição para desafios e capacidade de evolução.</p></div></div>
+    </div>
+  </div>
+</section>
 
-  <!-- FORMULÁRIO -->
-  <section class="form-section" id="formulario">
+<section class="results">
+  <p class="results-statement">A maioria das empresas contrata pelo currículo.<br>Nós contratamos pela <strong>capacidade de liderar.</strong></p>
+</section>
+
+<section class="form-section" id="formulario">
+  <div class="form-container">
+    <div class="form-text">
+      <h2>Sua empresa precisa de líderes preparados para gerar resultados?</h2>
+      <p>Conte com a GoodWork para conduzir um processo seletivo estratégico e identificar profissionais alinhados ao momento e aos desafios do seu negócio.</p>
+    </div>
     <div class="form-wrapper">
-      <h2 class="form-title">Vamos conversar?</h2>
-      <p class="form-subtitle">Conte um pouco sobre sua situação e entraremos em contato.</p>
-
-      <p class="form-question">Hoje, quais desafios você enfrenta ao contratar líderes?</p>
-      <div class="form-options">
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="nao-performaram">
-          <span>Já contratei líderes que não performaram como esperado</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="perfil-comportamental">
-          <span>Tenho dificuldade em avaliar perfil comportamental</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="inseguranca">
-          <span>Sinto insegurança na decisão final de contratação</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="processos-pouco-assertivos">
-          <span>Perco tempo com processos seletivos pouco assertivos</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="liderancas-mal-preparadas">
-          <span>Minha equipe sofre com lideranças mal preparadas</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="prejuizos">
-          <span>Já tive prejuízos com contratações erradas</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="cultura">
-          <span>Tenho dificuldade em encontrar líderes alinhados à cultura</span>
-        </label>
-        <label class="form-option">
-          <input type="checkbox" name="desafio" value="sem-processo">
-          <span>Preciso contratar, mas não tenho um processo estruturado</span>
-        </label>
-      </div>
-
-      <hr class="form-divider">
-
+      <p class="form-header">Preencha o formulário e fale com nossos especialistas em Recrutamento &amp; Seleção!</p>
+      <div class="form-group"><label>Nome do responsável</label><input type="text" placeholder="Seu nome completo"></div>
+      <div class="form-group"><label>Empresa</label><input type="text" placeholder="Nome da empresa"></div>
       <div class="form-row">
-        <div class="form-group">
-          <label>Nome</label>
-          <input type="text" placeholder="Seu nome completo">
-        </div>
-        <div class="form-group">
-          <label>Empresa</label>
-          <input type="text" placeholder="Nome da empresa">
-        </div>
+        <div class="form-group"><label>E-mail corporativo</label><input type="email" placeholder="seu@empresa.com.br"></div>
+        <div class="form-group"><label>Telefone</label><input type="tel" placeholder="(00) 00000-0000"></div>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" placeholder="seu@email.com">
-        </div>
-        <div class="form-group">
-          <label>WhatsApp</label>
-          <input type="tel" placeholder="(00) 00000-0000">
-        </div>
+      <div class="form-group"><label>Número de colaboradores</label>
+        <select><option value="" disabled selected>Selecione</option><option>1 a 10</option><option>11 a 50</option><option>51 a 200</option><option>201 a 500</option><option>Mais de 500</option></select>
       </div>
-      <div class="form-group">
-        <label>Porte da empresa</label>
-        <select>
-          <option value="" disabled selected>Selecione</option>
-          <option value="10-50">10 a 50 colaboradores</option>
-          <option value="51-200">51 a 200 colaboradores</option>
-          <option value="201-500">201 a 500 colaboradores</option>
-          <option value="500+">Mais de 500 colaboradores</option>
-        </select>
+      <div class="form-group"><label>Principais desafios atuais em RH</label>
+        <select><option value="" disabled selected>Selecione o principal desafio</option><option>Contratar líderes qualificados</option><option>Alta rotatividade na equipe</option><option>Desalinhamento de cultura</option><option>Lideranças com baixo desempenho</option><option>Empresa em crescimento</option><option>Sem processo estruturado de seleção</option><option>Outro desafio</option></select>
       </div>
-
-      <button class="form-submit" type="button">Quero falar com um especialista</button>
+      <button class="form-submit" type="button">Fale com Nossos Especialistas</button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA CONTATO DIRETO -->
-  <section class="cta-final">
-    <p>Prefere falar diretamente com a gente?</p>
-    <a href="https://wa.me/5545988101838" class="cta-whatsapp" target="_blank">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Chamar no WhatsApp
-    </a>
-  </section>
+<section class="cta-final">
+  <h2>Prefere falar diretamente com a gente?</h2>
+  <p>Agende uma conversa com nossos especialistas em contratação de líderes.</p>
+  <a href="https://wa.me/5545988101838" class="cta-whatsapp" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Agendar uma conversa
+  </a>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-brand">
-        <img src="images/logo.svg" alt="GoodWork">
-        <p>A GoodWork é uma empresa de Consultoria especializada em soluções para Recursos Humanos de pequenas e médias empresas.</p>
-        <strong>Atendemos de forma Nacional</strong>
-      </div>
+<section class="about">
+  <p><strong>A GoodWork</strong> é uma consultoria de Recursos Humanos especializada em contratação estratégica de líderes e desenvolvimento de lideranças, contribuindo para a formação de equipes mais fortes e alinhadas aos objetivos do negócio.</p>
+</section>
 
-      <div class="footer-col">
-        <h3>São Paulo</h3>
-        <div class="footer-contact">
-          <a href="https://wa.me/5511977706582" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            São Paulo - (11) 97770-6582
-          </a>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-            Rua Flórida, 1703, Sala 52<br>São Paulo - SP - 04565-909
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h3>Foz do Iguaçu</h3>
-        <div class="footer-contact">
-          <a href="tel:+554530295158" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            (45) 3029 5158
-          </a>
-          <a href="https://wa.me/5545988101838" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            (45) 98810-1838
-          </a>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-            Rua Rui Barbosa, 820, Sala 701<br>Foz do Iguaçu - PR - 85851-170
-          </div>
-          <a href="mailto:contato@goodwork.com.br" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            contato@goodwork.com.br
-          </a>
-        </div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="images/logo.svg" alt="GoodWork">
+      <p>Consultoria especializada em soluções para Recursos Humanos de pequenas e médias empresas.</p>
+      <strong>Atendemos de forma Nacional</strong>
+    </div>
+    <div class="footer-col">
+      <h3>São Paulo</h3>
+      <div class="footer-contact">
+        <a href="https://wa.me/5511977706582" class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>São Paulo - (11) 97770-6582</a>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Rua Flórida, 1703, Sala 52<br>São Paulo - SP - 04565-909</div>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      © 2026 GoodWork. Todos os direitos reservados.
+    <div class="footer-col">
+      <h3>Foz do Iguaçu</h3>
+      <div class="footer-contact">
+        <a href="tel:+554530295158" class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(45) 3029 5158</a>
+        <a href="https://wa.me/5545988101838" class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>(45) 98810-1838</a>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Rua Rui Barbosa, 820, Sala 701<br>Foz do Iguaçu - PR - 85851-170</div>
+        <a href="mailto:contato@goodwork.com.br" class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>contato@goodwork.com.br</a>
+      </div>
     </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">© 2026 GoodWork. Todos os direitos reservados.</div>
+</footer>
 
-  <script>
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 20);
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.animate-on-scroll').forEach((el, i) => {
-      el.style.transitionDelay = `${i * 60}ms`;
-      observer.observe(el);
-    });
-  </script>
+<script>
+window.addEventListener('scroll',()=>{document.querySelector('.navbar').classList.toggle('scrolled',window.scrollY>20)});
+const o=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('visible'),o.unobserve(e.target))})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.animate-on-scroll').forEach((e,i)=>{e.style.transitionDelay=i*60+'ms';o.observe(e)});
+</script>
 
 </body>
 </html>
